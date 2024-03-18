@@ -1,0 +1,25 @@
+model_list:
+  - model_name: dolphin-mixtral
+    litellm_params:
+      model: openai/models/dolphin-mixtral/snapshots/1
+      api_key: fake-key
+      api_base: https://genai.spcinfra.cloud/llm/v1/chat/completions
+  - model_name: gpt-3.5-turbo-0125
+    litellm_params:
+      model: openai/gpt-3.5-turbo-0125 # the `openai/` prefix tells litellm it's openai compatible
+#      api_base: http://0.0.0.0:4000
+      api_key: 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
+      rpm: 1440
+  - model_name: zephyr-beta
+    litellm_params:
+        model: huggingface/HuggingFaceH4/zephyr-7b-beta
+        api_base: http://0.0.0.0:8001
+        rpm: 60      # Optional[int]: When rpm/tpm set - litellm uses weighted pick for load balancing. rpm = Rate limit for this deployment: in requests per minute (rpm).
+        tpm: 1000   # Optional[int]: tpm = Tokens Per Minute
+  - model_name: zephyr-beta
+    litellm_params:
+        model: huggingface/HuggingFaceH4/zephyr-7b-beta
+        api_base: http://0.0.0.0:8002
+        rpm: 600
+
+  #mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis
