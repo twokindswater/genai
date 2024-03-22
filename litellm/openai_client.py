@@ -1,7 +1,7 @@
 import os
 import openai
 
-TOKEN = "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"
+TOKEN = os.getenv("OPENAI_API_KEY")
 print("TOKEN:", TOKEN)
 
 # TOKEN = os.getenv("OPENAI_API_KEY")
